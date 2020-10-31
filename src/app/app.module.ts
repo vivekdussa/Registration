@@ -7,6 +7,7 @@ import { EmployeeListingComponent } from './employee-listing/employee-listing.co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.module';
+import { HashLocationStrategy , LocationStrategy} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { MaterialModule } from './material/material.module';
     MaterialModule
   
   ],
-  providers: [],
+  providers: [{provide:LocationStrategy,useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
