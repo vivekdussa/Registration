@@ -1,0 +1,21 @@
+<div class='container-fluid'>
+<div class='container'>
+    <div class='row'>
+         <div class='col-md-4' id='cards'*ngFor='let data of usersdata;let i=index'>
+            <mat-card  class='card' >
+              <button mat-mini-fab class="close-icon">
+                <mat-icon (click)='doDelete(i)'>close</mat-icon>
+              </button>
+                <mat-card-header>
+                  <div mat-card-avatar class="header-image"></div>
+                  <mat-card-title>{{data.name}}</mat-card-title>
+                  <mat-card-subtitle>{{data.position}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content><p>{{data.about}}</p></mat-card-content>
+                 <mat-card-footer><b style='color:rgb(218, 51, 106)'>JOINING DATE&nbsp;&nbsp;:</b>&nbsp;&nbsp;&nbsp;{{data.date}}</mat-card-footer>
+                
+                </mat-card>
+        </div>
+    </div>
+</div>
+</div>
