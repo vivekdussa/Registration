@@ -4,7 +4,7 @@ import { EmployeeListingComponent } from './employee-listing/employee-listing.co
 import { EmployeeRegistrationComponent } from './employee-registration/employee-registration.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'/registration',pathMatch:'full'},
+  {path:'',component:EmployeeRegistrationComponent},
   {path:'registration',component:EmployeeRegistrationComponent},
   {path:'employee_details',component:EmployeeListingComponent},
   {path:'**',redirectTo:'/registration'}
